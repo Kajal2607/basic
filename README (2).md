@@ -238,6 +238,146 @@ int main() {
 
     return 0;
 }
+
+STACK IMPLEMENTATION
+
+
+#include <stdio.h>
+#include <stdbool.h>
+
+// Define the maximum capacity of the stack
+#define MAX_SIZE 100
+
+// Define a structure for the stack
+typedef struct {
+    // Array to store stack elements
+    int arr[MAX_SIZE];
+    // Index of the top element in the stack
+    int top;
+} Stack;
+
+// Function to initialize the stack
+void initialize(Stack *stack) {
+    // Set top index to -1 to indicate an empty stack
+    stack->top = -1;
+}
+
+// Function to check if the stack is empty
+bool isEmpty(Stack *stack) {
+    return stack->top == -1;
+}
+
+// Function to check if the stack is full
+bool isFull(Stack *stack) {
+    return stack->top == MAX_SIZE - 1;
+}
+
+// Function to push an element onto the stack
+void push(Stack *stack, int value) {
+    if (isFull(stack)) {
+        printf("Stack Overflow\n");
+        return;
+    }
+    // Increment top and add the value to the top of the stack
+    stack->arr[++stack->top] = value;
+}
+
+// Function to pop an element from the stack
+int pop(Stack *stack) {
+    if (isEmpty(stack)) {
+        printf("Stack Underflow\n");
+        return -1; // Return a sentinel value
+    }
+    // Return the topmost element and decrement top
+    return stack->arr[stack->top--];
+}
+
+// Example usage
+int main() {
+    Stack myStack;
+    initialize(&myStack);
+
+    push(&myStack, 10);
+    push(&myStack, 20);
+    push(&myStack, 30);
+
+    printf("Popped element: %d\n", pop(&myStack)); // Should print 30
+    printf("Popped element: %d\n", pop(&myStack)); // Should print 20
+
+    return 0;
+}
+
+
+
+QUEUE IMPLEMENTATION
+
+
+#include <stdio.h>
+#include <stdbool.h>
+
+// Define the maximum capacity of the stack
+#define MAX_SIZE 100
+
+// Define a structure for the stack
+typedef struct {
+    // Array to store stack elements
+    int arr[MAX_SIZE];
+    // Index of the top element in the stack
+    int top;
+} Stack;
+
+// Function to initialize the stack
+void initialize(Stack *stack) {
+    // Set top index to -1 to indicate an empty stack
+    stack->top = -1;
+}
+
+// Function to check if the stack is empty
+bool isEmpty(Stack *stack) {
+    return stack->top == -1;
+}
+
+// Function to check if the stack is full
+bool isFull(Stack *stack) {
+    return stack->top == MAX_SIZE - 1;
+}
+
+// Function to push an element onto the stack
+void push(Stack *stack, int value) {
+    if (isFull(stack)) {
+        printf("Stack Overflow\n");
+        return;
+    }
+    // Increment top and add the value to the top of the stack
+    stack->arr[++stack->top] = value;
+}
+
+// Function to pop an element from the stack
+int pop(Stack *stack) {
+    if (isEmpty(stack)) {
+        printf("Stack Underflow\n");
+        return -1; // Return a sentinel value
+    }
+    // Return the topmost element and decrement top
+    return stack->arr[stack->top--];
+}
+
+// Example usage
+int main() {
+    Stack myStack;
+    initialize(&myStack);
+
+    push(&myStack, 10);
+    push(&myStack, 20);
+    push(&myStack, 30);
+
+    printf("Popped element: %d\n", pop(&myStack)); // Should print 30
+    printf("Popped element: %d\n", pop(&myStack)); // Should print 20
+
+    return 0;
+}
+
+
 ```
 
 ## Task 3
