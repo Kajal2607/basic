@@ -238,9 +238,9 @@ int main() {
 
     return 0;
 }
-
+```
 STACK IMPLEMENTATION
-
+```
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -308,9 +308,9 @@ int main() {
 }
 
 
-
+```
 QUEUE IMPLEMENTATION
-
+```
 
 #include <stdio.h>
 #include <stdbool.h>
