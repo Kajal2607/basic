@@ -22,6 +22,7 @@ git checkout a1  # to switch branches
 git reset --soft a1
 git branch -d a1  # to delete a1 branch
 git rm <file-name>  # to delete a file from repo
+git remote set-url origin https://github.com/Kajal2607/git_test.git
 ```
 ## Task 2
 
